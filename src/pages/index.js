@@ -218,7 +218,7 @@ export default function Home() {
       <div  className="px-4 py-6 bg-[#f7f7f7] mt-44">
       <div className="max-w-7xl mx-auto text-left">
         {/* Teks About Us */}
-        <h2  className="text-3xl font-semibold text-[#4F6F52] mb-6 text-center underline">-About Us-</h2>
+        <h2  className="text-3xl font-semibold text-[#4F6F52] mb-6 text-center underline">-About Me-</h2>
         <p className="text-lg text-gray-700 mb-6 text-center">
           Hello, I’m I Komang Jaya Andika Saputra, a passionate Web Developer based in Bali, Indonesia. With a keen eye for design and a love for technology, I specialize in creating responsive and user-friendly websites.
         </p>
