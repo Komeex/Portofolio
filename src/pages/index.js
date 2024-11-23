@@ -1,115 +1,345 @@
 import Image from "next/image";
-import localFont from "next/font/local";
-
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import { useEffect } from "react";
+import Link from "next/link";
+import Typed from "typed.js";
 
 export default function Home() {
-  return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  useEffect(() => {
+    const menuButton = document.querySelector('[aria-controls="mobile-menu"]');
+    const mobileMenu = document.getElementById("mobile-menu");
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    menuButton.addEventListener("click", () => {
+      const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", !isExpanded);
+      mobileMenu.classList.toggle("hidden");
+    });
+
+    
+    const typed = new Typed("#Hey", {
+      strings: ["HEY"],
+      startDelay: 500, 
+      backSpeed: 50, 
+      backDelay: 1000, 
+      loop: false, 
+      showCursor: false,
+    });
+
+    const typed1 = new Typed("#nama-saya", {
+      strings: ["I’m Kommexx"], 
+      typeSpeed: 100, 
+      startDelay: 1000, 
+      backSpeed: 50, 
+      backDelay: 1000, 
+      loop: true, 
+      showCursor: false,
+    });
+
+    // Bersihkan Typed.js saat komponen dihapus
+    return () => {
+      typed.destroy();
+    };
+  }, []); // Empty array agar hanya dijalankan sekali saat komponen pertama kali dimuat
+
+  return (
+    <>
+      <nav className="bg-[#1A4D2E]">
+        <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+          <div className="relative flex h-16 items-center justify-between">
+            {/* Logo di kiri */}
+            <div className="flex items-center">
+              <h1 className="h-7 text-xl text-white font-semibold">Kommex</h1>
+            </div>
+
+            {/* Tombol burger untuk mobile */}
+            <div className="absolute right-0 md:hidden">
+              <button
+                type="button"
+                className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                aria-controls="mobile-menu"
+                aria-expanded="false"
+              >
+                <span className="absolute -inset-0.5"></span>
+                <span className="sr-only">Open main menu</span>
+          
+                <svg
+                  className="block size-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                  />
+                </svg>
+
+                <svg
+                  className="hidden size-6"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <div className="hidden md:ml-6 md:block">
+              <div className="flex space-x-4">
+                <Link
+                  href="#"
+                  className="rounded-md px-3 py-2 font-xl underline1"
+                >
+                  Home
+                </Link>
+                <Link
+                  href="#aboutus"
+                  className="rounded-md px-3 py-2 font-xl underline1"
+                >
+                  About Us
+                </Link>
+                <Link
+                  href="#portofolio"
+                  className="rounded-md px-3 py-2 font-medium underline1"
+                >
+                  Portofolio
+                </Link>
+                <Link
+                  href="#"
+                  className="rounded-md px-3 py-2 font-medium underline1"
+                >
+                  Contact Us
+                </Link>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+
+        <div className="md:hidden hidden" id="mobile-menu">
+          <div className="space-y-1 px-2 pb-3 pt-2">
+            <Link
+              href="#"
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-700 hover:text-white underline"
+              aria-current="page"
+            >
+              Home
+            </Link>
+            <Link
+              href="#aboutus"
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-700 hover:text-white underline"
+            >
+              About us
+            </Link>
+            <Link
+              href="#portofolio"
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-700 hover:text-white underline"
+            >
+              Portofolio
+            </Link>
+            <Link
+              href="#"
+              className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 hover:bg-gray-700 hover:text-white underline"
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+      </nav>
+
+      <div className=" mx-auto px-4 ">
+        <div className="flex flex-col md:flex-row items-center overflow-hidden 2xl:mx-80 xl:mx-52 md:mx-20 sm:mx-20 xl:mt-32 lg:mt-32 md:mt-32 sm:mt-24 mt-20">
+          <div className="md:w-1/2">
+            <Image
+              src="/Assets/profil2.png"
+              width="512"
+              height="512"
+              className="w-48 sm:w-64 md:w-80 lg:w-96 h-auto object-cover xl:rounded-none md:rounded-none sm:rounded-full rounded-full "
+            />
+          </div>
+
+          <div className="md:w-1/2 p-4 text-center">
+
+            <h1
+              id="Hey"
+              className="text-3xl font-bold text-[#4F6F52] mb-4 text-center"
+            ></h1>
+            <h1
+              id="nama-saya"
+              className="text-3xl font-bold text-[#4F6F52] mb-4 text-center"
+            ></h1>
+            <p className="text-gray-600 mb-6 text-center pt-4">
+              Hello I’m I Komang Jaya Andika Saputra, a passionate Web Developer
+              dedicated to turning ideas into beautifully crafted, responsive
+              websites.
+            </p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
+              {/* Daftar keterampilan */}
+              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+                <span className="text-lg font-medium">HTML</span>
+              </div>
+              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+                <span className="text-lg font-medium">CSS</span>
+              </div>
+              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+                <span className="text-lg font-medium">Tailwind</span>
+              </div>
+              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+                <span className="text-lg font-medium">BoosStrap</span>
+              </div>
+              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+                <span className="text-lg font-medium">JavaScript</span>
+              </div>
+              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+                <span className="text-lg font-medium">Java</span>
+              </div>
+              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+                <span className="text-lg font-medium">PHP</span>
+              </div>
+              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+                <span className="text-lg font-medium">NextJS</span>
+              </div>
+            </div>
+            <button id="aboutus"  className="bg-[#4F6F52] text-white px-6 py-2">
+              See More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div  className="px-4 py-6 bg-[#f7f7f7] mt-44">
+      <div className="max-w-7xl mx-auto text-left">
+        {/* Teks About Us */}
+        <h2  className="text-3xl font-semibold text-[#4F6F52] mb-6 text-center underline">-About Us-</h2>
+        <p className="text-lg text-gray-700 mb-6 text-center">
+          Hello, I’m I Komang Jaya Andika Saputra, a passionate Web Developer based in Bali, Indonesia. With a keen eye for design and a love for technology, I specialize in creating responsive and user-friendly websites.
+        </p>
+
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 text-center pb-10">
+      <div className="text-lg font-medium text-[#4F6F52]">
+        <p className="text-gray-500 text-sm">Negara</p>
+        <p>Indonesia</p>
+      </div>
+      <div className="text-lg font-medium text-[#4F6F52]">
+        <p className="text-gray-500 text-sm">Provinsi</p>
+        <p>Bali</p>
+      </div>
+      <div className="text-lg font-medium text-[#4F6F52]">
+        <p className="text-gray-500 text-sm">Kabupaten</p>
+        <p>Tabanan</p>
+      </div>
     </div>
+
+        <div className="flex flex-col md:flex-row gap-6 mb-8">
+  <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
+            <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Community Projects</h3>
+            <p className="text-gray-600">I have actively participated in creating websites that support local entrepreneurs, helping them establish an online presence and grow their businesses.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
+            <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Study</h3>
+            <p className="text-gray-600">I studied RPL at Smk Wira Harapan, where I developed my skills in web development.</p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
+            <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Personal Projects</h3>
+            <p className="text-gray-600">I work on personal projects that allow me to experiment with new technologies, improve my skills, and build web solutions for different needs and scenarios.</p>
+          </div>
+        </div>
+
+ 
+
+      </div>
+    </div>
+
+
+      <h1 className="text-3xl font-bold text-[#4F6F52] mb-10 text-center mt-20 underline">
+        -Our Lastest Project-
+      </h1>
+      <div className="  md:px-28 xl:px-32 py-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <img
+              src="/Assets/nyarik.png"
+              alt="Card 1 Image"
+              className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
+            />
+            <h2 className="text-xl font-semibold text-[#4F6F52] mt-4 pb-2">
+              Nyariik Kopi
+            </h2>
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4 ">
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">HTML</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">CSS</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">BoosStrap</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">AOS</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <img
+              src="/Assets/adminlte.png"
+              alt="Card 2 Image"
+              className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
+            />
+            <h2 className="text-xl font-semibold text-[#4F6F52] mt-4">
+              Admin LTE
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">HTML</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">CSS</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">BoosStrap</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">PHP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <img
+              src="/Assets/coffe.png"
+              alt="Card 5 Image"
+              className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
+            />
+            <h2 id="portofolio" className="text-xl font-semibold text-[#4F6F52] mt-4">
+              Coffe Sunday
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">HTML</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">CSS</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

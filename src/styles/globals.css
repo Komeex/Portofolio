@@ -2,20 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  scroll-behavior: smooth;
+  font-family: "Playfair Display", serif;
+}
+.underline1 {
+  position: relative;
+  text-decoration: none;
+  color: rgb(255, 255, 255); /* Sesuaikan warna teks */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.underline1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: rgb(255, 255, 255); /* Warna underline */
+  transition: width 0.3s ease-in-out;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.underline1:hover::after,
+.underline1.active::after { /* Aktifkan pada hover dan tab aktif */
+  width: 100%;
+}
+
+.see_more {
+  border-radius: 0px 20px 0px 20px;
 }
