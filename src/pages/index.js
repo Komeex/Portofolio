@@ -30,7 +30,7 @@ export default function Home() {
       startDelay: 1000, 
       backSpeed: 50, 
       backDelay: 1000, 
-      loop: true, 
+      loop: CSSFontFeatureValuesRule, 
       showCursor: false,
     });
 
