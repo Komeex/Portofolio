@@ -30,7 +30,7 @@ export default function Home() {
       startDelay: 1000, 
       backSpeed: 50, 
       backDelay: 1000, 
-      loop: CSSFontFeatureValuesRule, 
+      loop: false, 
       showCursor: false,
     });
 
@@ -65,13 +65,13 @@ export default function Home() {
                   className="block size-6"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   aria-hidden="true"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                   />
                 </svg>
@@ -80,13 +80,13 @@ export default function Home() {
                   className="hidden size-6"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.5"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   aria-hidden="true"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="M6 18 18 6M6 6l12 12"
                   />
                 </svg>
@@ -215,11 +215,11 @@ export default function Home() {
         </div>
       </div>
 
-      <div  className="px-4 py-6 bg-[#f7f7f7] mt-44">
+      <div  className="px-4 bg-gray-100 py-24 my-44">
       <div className="max-w-7xl mx-auto text-left">
         {/* Teks About Us */}
-        <h2  className="text-3xl font-semibold text-[#4F6F52] mb-6 text-center underline">-About Me-</h2>
-        <p className="text-lg text-gray-700 mb-6 text-center">
+        <h2  className="text-3xl font-semibold text-[#4F6F52] mb-6 text-center">-About Me-</h2>
+        <p className="text-lg text-gray-700 mb-6 text-center mx-10 lg:mx-72">
           Hello, I’m I Komang Jaya Andika Saputra, a passionate Web Developer based in Bali, Indonesia. With a keen eye for design and a love for technology, I specialize in creating responsive and user-friendly websites.
         </p>
 
@@ -325,6 +325,48 @@ export default function Home() {
             />
             <h2 id="portofolio" className="text-xl font-semibold text-[#4F6F52] mt-4">
               Coffe Sunday
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">HTML</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">CSS</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <img
+              src="https://placehold.co/600x400"
+              alt="Card 5 Image"
+              className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
+            />
+            <h2 id="portofolio" className="text-xl font-semibold text-[#4F6F52] mt-4">
+              Coming Soon
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">HTML</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">CSS</span>
+              </div>
+              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+                <span className="text-lg ">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div className="bg-white p-4 rounded-lg shadow-lg">
+            <img
+              src="https://placehold.co/600x400"
+              alt="Card 5 Image"
+              className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
+            />
+            <h2 id="portofolio" className="text-xl font-semibold text-[#4F6F52] mt-4">
+              Coming Soon
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
               <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
