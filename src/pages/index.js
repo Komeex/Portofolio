@@ -265,7 +265,9 @@ export default function Home() {
       <div className="  md:px-28 xl:px-32 py-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
           <div className="bg-white p-4 rounded-lg shadow-lg">
-            <img
+            <Image 
+            width="512"
+            height="512"
               src="/Assets/nyarik.png"
               alt="Card 1 Image"
               className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
@@ -291,7 +293,9 @@ export default function Home() {
           </div>
 
           <div className="bg-white p-4 rounded-lg shadow-lg">
-            <img
+            <Image 
+            width="512"
+            height="512"
               src="/Assets/adminlte.png"
               alt="Card 2 Image"
               className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
@@ -318,7 +322,9 @@ export default function Home() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           <div className="bg-white p-4 rounded-lg shadow-lg">
-            <img
+            <Image 
+            width="512"
+            height="512"
               src="/Assets/coffe.png"
               alt="Card 5 Image"
               className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
@@ -339,7 +345,9 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-white p-4 rounded-lg shadow-lg">
-            <img
+            <Image 
+            width="512"
+            height="512"
               src="https://placehold.co/600x400"
               alt="Card 5 Image"
               className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
@@ -360,7 +368,9 @@ export default function Home() {
             </div>
           </div>
           <div className="bg-white p-4 rounded-lg shadow-lg">
-            <img
+            <Image 
+            width="512"
+            height="512"
               src="https://placehold.co/600x400"
               alt="Card 5 Image"
               className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
