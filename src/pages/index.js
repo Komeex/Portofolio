@@ -183,28 +183,28 @@ export default function Home() {
             </p>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
               {/* Daftar keterampilan */}
-              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
                 <span className="text-lg font-medium">HTML</span>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
                 <span className="text-lg font-medium">CSS</span>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
                 <span className="text-lg font-medium">Tailwind</span>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
                 <span className="text-lg font-medium">BoosStrap</span>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
                 <span className="text-lg font-medium">JavaScript</span>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
                 <span className="text-lg font-medium">Java</span>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
                 <span className="text-lg font-medium">PHP</span>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 hover:scale-[1.08] transition duration-300">
+              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
                 <span className="text-lg font-medium">NextJS</span>
               </div>
             </div>
