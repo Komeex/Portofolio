@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <>
-      <nav className="bg-[#1A4D2E]">
+      <nav className="bg-[#1A4D2E] fixed  top-0 w-screen">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             {/* Logo di kiri */}
@@ -270,23 +270,23 @@ export default function Home() {
             height="512"
               src="/Assets/nyarik.png"
               alt="Card 1 Image"
-              className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
+              className="w-full h-48 object-cover rounded-lg lg:hover:scale-[1.03] transition duration-300"
             />
             <h2 className="text-xl font-semibold text-[#4F6F52] mt-4 pb-2">
               Nyariik Kopi
             </h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4 ">
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">HTML</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">CSS</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">BoosStrap</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">AOS</span>
               </div>
             </div>
@@ -298,22 +298,22 @@ export default function Home() {
             height="512"
               src="/Assets/adminlte.png"
               alt="Card 2 Image"
-              className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
+              className="w-full h-48 object-cover rounded-lg lg:hover:scale-[1.03] transition duration-300"
             />
             <h2 className="text-xl font-semibold text-[#4F6F52] mt-4">
               Admin LTE
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">HTML</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">CSS</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">BoosStrap</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">PHP</span>
               </div>
             </div>
@@ -327,19 +327,19 @@ export default function Home() {
             height="512"
               src="/Assets/coffe.png"
               alt="Card 5 Image"
-              className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
+              className="w-full h-48 object-cover rounded-lg lg:hover:scale-[1.03] transition duration-300"
             />
             <h2 id="portofolio" className="text-xl font-semibold text-[#4F6F52] mt-4">
               Coffe Sunday
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">HTML</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">CSS</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">JavaScript</span>
               </div>
             </div>
@@ -348,21 +348,21 @@ export default function Home() {
             <Image 
             width="512"
             height="512"
-              src="https://placehold.co/600x400"
+              src="/Assets/coffe.png"
               alt="Card 5 Image"
-              className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
+              className="w-full h-48 object-cover rounded-lg lg:hover:scale-[1.03] transition duration-300"
             />
             <h2 id="portofolio" className="text-xl font-semibold text-[#4F6F52] mt-4">
               Coming Soon
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">HTML</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">CSS</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">JavaScript</span>
               </div>
             </div>
@@ -371,21 +371,21 @@ export default function Home() {
             <Image 
             width="512"
             height="512"
-              src="https://placehold.co/600x400"
+              src="/Assets/coffe.png"
               alt="Card 5 Image"
-              className="w-full h-48 object-cover rounded-lg hover:scale-[1.03] transition duration-300"
+              className="w-full h-48 object-cover rounded-lg lg:hover:scale-[1.03] transition duration-300"
             />
             <h2 id="portofolio" className="text-xl font-semibold text-[#4F6F52] mt-4">
               Coming Soon
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">HTML</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">CSS</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
                 <span className="text-lg ">JavaScript</span>
               </div>
             </div>
