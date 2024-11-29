@@ -140,7 +140,7 @@ export default function Home() {
     {/* Bagian Gambar */}
     <div className="w-full lg:w-1/2 flex items-center justify-center">
       <img
-        src="/Assets/mirror.png"
+        src="/Assets/mittor.png"
         alt="Contact Illustration"
         className="max-w-full h-auto rounded-lg shadow-md"
       />
