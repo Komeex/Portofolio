@@ -26,7 +26,7 @@ export default function Home() {
       
       strings: ["Hey"],
       typeSpeed: 300, 
-      startDelay: 500, 
+      startDelay: 400, 
       backSpeed: 50, 
       backDelay: 1000, 
       loop: false, 
@@ -35,8 +35,8 @@ export default function Home() {
 
     const typed1 = new Typed("#nama-saya", {
       strings: ["I’m Kommexx"], 
-      typeSpeed: 100, 
-      startDelay: 500, 
+      typeSpeed: 150, 
+      startDelay: 1500, 
       backSpeed: 50, 
       backDelay: 1000, 
       loop: false, 
@@ -173,144 +173,140 @@ export default function Home() {
               dedicated to turning ideas into beautifully crafted, responsive
               websites.
             </p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
-              {/* Daftar keterampilan */}
-              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
-                <span className="text-lg font-medium">HTML</span>
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 pb-4">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
+                <p className="text-lg font-medium">HTML</p>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
-                <span className="text-lg font-medium">CSS</span>
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white ">
+                <p className="text-lg font-medium">CSS</p>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
-                <span className="text-lg font-medium">Tailwind</span>
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
+                <p className="text-lg font-medium">Tailwind</p>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
-                <span className="text-lg font-medium">BoosStrap</span>
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
+                <p className="text-lg font-medium">BoosStrap</p>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
-                <span className="text-lg font-medium">JavaScript</span>
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
+                <p className="text-lg font-medium">JavaScript</p>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
-                <span className="text-lg font-medium">Java</span>
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
+                <p className="text-lg font-medium">Java</p>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
-                <span className="text-lg font-medium">PHP</span>
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 lg:hover:text-white">
+                <p className="text-lg font-medium">PHP</p>
               </div>
-              <div className="flex items-center justify-center p-1 border border-green-900 lg:hover:scale-[1.08] transition duration-300">
-                <span className="text-lg font-medium">NextJS</span>
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 lg:hover:text-white">
+                <p className="text-lg font-medium">NextJS</p>
               </div>
             </div>
-            <button  className="bg-[#4F6F52] text-white px-6 py-2">
+            <button id="aboutus"   className="bg-[#4F6F52] text-white px-6 py-2">
               See More
             </button>
           </div>
         </div>
       </div>
 <h1 id="aboutus"></h1>
-    <div  className="px-4 bg-gray-100 py-24 my-44 -z-50" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
+    <div  className="px-4 bg-gray-100 py-12 my-24 " data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
       <div className="max-w-7xl mx-auto text-left">
-        {/* Teks About Us */}
-        <h2  className="text-3xl font-semibold text-[#4F6F52] mb-6 text-center">-About Me-</h2>
+      
+        <h2  className="text-3xl font-semibold text-[#4F6F52] mb-12 text-center">-About Me-</h2>
         <p className="text-lg text-gray-700 mb-6 text-center mx-10 lg:mx-72">
           Hello, I’m I Komang Jaya Andika Saputra, a passionate Web Developer based in Bali, Indonesia. With a keen eye for design and a love for technology, I specialize in creating responsive and user-friendly websites.
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 text-center pb-10">
-      <div className="text-lg font-medium text-[#4F6F52]">
+      <div className="text-lg font-medium text-[#4F6F52]" data-aos="zoom-out-down" data-aos-delay="800" data-aos-duration="1000">
         <p className="text-gray-500 text-sm">Negara</p>
         <p>Indonesia</p>
       </div>
-      <div className="text-lg font-medium text-[#4F6F52]">
+      <div className="text-lg font-medium text-[#4F6F52]" data-aos="zoom-out-down" data-aos-delay="600" data-aos-duration="1000">
         <p className="text-gray-500 text-sm">Provinsi</p>
         <p>Bali</p>
       </div>
-      <div className="text-lg font-medium text-[#4F6F52]">
+      <div className="text-lg font-medium text-[#4F6F52]" data-aos="zoom-out-down" data-aos-delay="400" data-aos-duration="1000">
         <p className="text-gray-500 text-sm">Kabupaten</p>
         <p>Tabanan</p>
       </div>
     </div>
 
         <div className="flex flex-col md:flex-row gap-6 mb-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-out-up" data-aos-delay="400" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Community Projects</h3>
             <p className="text-gray-600">I have actively participated in creating websites that support local entrepreneurs, helping them establish an online presence and grow their businesses.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-out-up" data-aos-delay="600" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Study</h3>
             <p className="text-gray-600">I studied RPL at Smk Wira Harapan, where I developed my skills in web development.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-out-up" data-aos-delay="800" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Personal Projects</h3>
-            <p className="text-gray-600">I work on personal projects that allow me to experiment with new technologies, improve my skills, and build web solutions for different needs and scenarios.</p>
+            <p id="portofolio" className="text-gray-600">I work on personal projects that allow me to experiment with new technologies, improve my skills, and build web solutions for different needs and scenarios.</p>
           </div>
         </div>
       </div>
     </div>
 
-
-      <h1 className="text-3xl font-bold text-[#4F6F52] mb-10 text-center mt-20 underline">
+      <h1 className="text-3xl font-bold text-[#4F6F52] mb-14 text-center mt-20" >
         -Our Lastest Project-
       </h1>
-      <div className="  md:px-28 xl:px-32 py-6" >
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-        <div className="bg-white p-4 rounded-lg shadow-lg">
+<div className="  md:px-28 xl:px-32 py-6" >
+  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+    <div className="bg-white p-4 rounded-lg shadow-lg"           data-aos-once="false"
+          data-aos-delay="400" data-aos-duration="1000">
       <div className="relative group w-full h-48 rounded-lg overflow-hidden">
         <Image
           width="512"
           height="512"
           src="/Assets/nyarik.png"
-          alt="Nyariik Kopi"
-          className="w-full h-full object-cover rounded-lg transition-all duration-300 ease-in-out group-hover:grayscale grayscale-0"
-          data-aos="zoom-in"
-          data-aos-once="false"
-        />
-        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-          <p className="text-white font-semibold text-lg">Nyariik Kopi</p>
+          className="w-full h-full object-cover rounded-lg transition-all "/>
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out ">
+          <p className="text-white font-semibold text-lg">Nyarik Kopi</p>
         </div>
       </div>
 
-      {/* Project Title */}
+      
       <h2 className="text-xl font-semibold text-[#4F6F52] mt-4 pb-2">Nyariik Kopi</h2>
 
       {/* Tech Stack */}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
-        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
           <span className="text-lg">HTML</span>
         </div>
-        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
           <span className="text-lg">CSS</span>
         </div>
-        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
           <span className="text-lg">Bootstrap</span>
         </div>
-        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
           <span className="text-lg">AOS</span>
         </div>
       </div>
     </div>
 
           <div className="bg-white p-4 rounded-lg shadow-lg">
+            <div>
             <Image 
             width="512"
             height="512"
               src="/Assets/adminlte.png"
-              alt="Card 2 Image"
               className="w-full h-48 object-cover rounded-lg lg:hover:scale-[1.03] transition duration-300"
             />
+            </div>
             <h2 className="text-xl font-semibold text-[#4F6F52] mt-4">
               Admin LTE
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">HTML</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">CSS</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">BoosStrap</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">PHP</span>
               </div>
             </div>
@@ -323,20 +319,19 @@ export default function Home() {
             width="512"
             height="512"
               src="/Assets/coffe.png"
-              alt="Card 5 Image"
               className="w-full h-48 object-cover rounded-lg lg:hover:scale-[1.03] transition duration-300"
             />
             <h2 id="portofolio" className="text-xl font-semibold text-[#4F6F52] mt-4">
               Coffe Sunday
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">HTML</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">CSS</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">JavaScript</span>
               </div>
             </div>
@@ -353,13 +348,13 @@ export default function Home() {
               Coming Soon
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">HTML</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">CSS</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">JavaScript</span>
               </div>
             </div>
@@ -376,13 +371,13 @@ export default function Home() {
               Coming Soon
             </h2>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">HTML</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">CSS</span>
               </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300 hover:bg-green-900 hover:text-white">
                 <span className="text-lg ">JavaScript</span>
               </div>
             </div>
