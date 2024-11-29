@@ -8,9 +8,9 @@ import 'aos/dist/aos.css';
 export default function Home() {
   useEffect(() => {
 
-    AOS.init(
-
-    );
+    AOS.init({
+       
+  });
 
     const menuButton = document.querySelector('[aria-controls="mobile-menu"]');
     const mobileMenu = document.getElementById("mobile-menu");
@@ -24,7 +24,8 @@ export default function Home() {
     
     const typed = new Typed("#Hey", {
       
-      strings: ["HEY"],
+      strings: ["Hey"],
+      typeSpeed: 300, 
       startDelay: 500, 
       backSpeed: 50, 
       backDelay: 1000, 
@@ -35,7 +36,7 @@ export default function Home() {
     const typed1 = new Typed("#nama-saya", {
       strings: ["I’m Kommexx"], 
       typeSpeed: 100, 
-      startDelay: 1000, 
+      startDelay: 500, 
       backSpeed: 50, 
       backDelay: 1000, 
       loop: false, 
@@ -46,11 +47,17 @@ export default function Home() {
     return () => {
       typed.destroy();
     };
+
+    AOS.init(
+
+    );
+
+
   }, []); // Empty array agar hanya dijalankan sekali saat komponen pertama kali dimuat
 
   return (
     <>
-      <nav className="bg-[#1A4D2E] fixed  top-0 w-screen">
+      <nav className="bg-[#1A4D2E] fixed top-0 w-screen z-50">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             {/* Logo di kiri */}
@@ -139,17 +146,19 @@ export default function Home() {
       </nav>
 
       <div className=" mx-auto px-4 ">
-        <div className="flex flex-col md:flex-row items-center overflow-hidden 2xl:mx-80 xl:mx-52 md:mx-20 sm:mx-20 xl:mt-48 lg:mt-48 md:mt-48 sm:mt-24 mt-20">
+        <div className="flex flex-col md:flex-row items-center overflow-hidden 2xl:px-80 xl:px-52 md:px-20 sm:px-20 xl:mt-48 lg:mt-48 md:mt-48 sm:mt-24 mt-20">
           <div className="md:w-1/2">
             <Image
               src="/Assets/profil2.png"
               width="512"
               height="512"
+              data-aos="fade-left" data-aos-delay="200" data-aos-duration="1200"
               className="w-48 sm:w-64 md:w-80 lg:w-96 h-auto object-cover xl:rounded-none md:rounded-none sm:rounded-full rounded-full "
+
             />
           </div>
 
-          <div className="md:w-1/2 p-4 text-center">
+          <div className="md:w-1/2 p-4 text-center" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1200">
 
             <h1
               id="Hey"
@@ -198,7 +207,7 @@ export default function Home() {
         </div>
       </div>
 <h1 id="aboutus"></h1>
-    <div  className="px-4 bg-gray-100 py-24 my-44" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+    <div  className="px-4 bg-gray-100 py-24 my-44 -z-50" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1200">
       <div className="max-w-7xl mx-auto text-left">
         {/* Teks About Us */}
         <h2  className="text-3xl font-semibold text-[#4F6F52] mb-6 text-center">-About Me-</h2>
@@ -222,15 +231,15 @@ export default function Home() {
     </div>
 
         <div className="flex flex-col md:flex-row gap-6 mb-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Community Projects</h3>
             <p className="text-gray-600">I have actively participated in creating websites that support local entrepreneurs, helping them establish an online presence and grow their businesses.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Study</h3>
             <p className="text-gray-600">I studied RPL at Smk Wira Harapan, where I developed my skills in web development.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Personal Projects</h3>
             <p className="text-gray-600">I work on personal projects that allow me to experiment with new technologies, improve my skills, and build web solutions for different needs and scenarios.</p>
           </div>
@@ -244,33 +253,41 @@ export default function Home() {
       </h1>
       <div className="  md:px-28 xl:px-32 py-6" >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
-          <div className="bg-white p-4 rounded-lg shadow-lg">
-            <Image 
-            width="512"
-            height="512"
-              src="/Assets/nyarik.png"
-              alt="Card 1 Image"
-              className="w-full h-48 object-cover rounded-lg lg:hover:scale-[1.03] transition duration-300"
-            />
-            <h2 className="text-xl font-semibold text-[#4F6F52] mt-4 pb-2">
-              Nyariik Kopi
-            </h2>
+        <div className="bg-white p-4 rounded-lg shadow-lg">
+      <div className="relative group w-full h-48 rounded-lg overflow-hidden">
+        <Image
+          width="512"
+          height="512"
+          src="/Assets/nyarik.png"
+          alt="Nyariik Kopi"
+          className="w-full h-full object-cover rounded-lg transition-all duration-300 ease-in-out group-hover:grayscale grayscale-0"
+          data-aos="zoom-in"
+          data-aos-once="false"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+          <p className="text-white font-semibold text-lg">Nyariik Kopi</p>
+        </div>
+      </div>
 
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4 ">
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
-                <span className="text-lg ">HTML</span>
-              </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
-                <span className="text-lg ">CSS</span>
-              </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
-                <span className="text-lg ">BoosStrap</span>
-              </div>
-              <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
-                <span className="text-lg ">AOS</span>
-              </div>
-            </div>
-          </div>
+      {/* Project Title */}
+      <h2 className="text-xl font-semibold text-[#4F6F52] mt-4 pb-2">Nyariik Kopi</h2>
+
+      {/* Tech Stack */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2 pb-4">
+        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+          <span className="text-lg">HTML</span>
+        </div>
+        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+          <span className="text-lg">CSS</span>
+        </div>
+        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+          <span className="text-lg">Bootstrap</span>
+        </div>
+        <div className="flex items-center justify-center border border-green-900 lg:hover:scale-[1.05] transition duration-300">
+          <span className="text-lg">AOS</span>
+        </div>
+      </div>
+    </div>
 
           <div className="bg-white p-4 rounded-lg shadow-lg">
             <Image 
