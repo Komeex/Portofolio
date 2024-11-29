@@ -2,9 +2,16 @@ import Image from "next/image";
 import { useEffect } from "react";
 import Link from "next/link";
 import Typed from "typed.js";
+import AOS from "aos";
+import 'aos/dist/aos.css';
 
 export default function Home() {
   useEffect(() => {
+
+    AOS.init(
+
+    );
+
     const menuButton = document.querySelector('[aria-controls="mobile-menu"]');
     const mobileMenu = document.getElementById("mobile-menu");
 
@@ -16,6 +23,7 @@ export default function Home() {
 
     
     const typed = new Typed("#Hey", {
+      
       strings: ["HEY"],
       startDelay: 500, 
       backSpeed: 50, 
@@ -46,8 +54,8 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
             {/* Logo di kiri */}
-            <div className="flex items-center">
-              <h1 className="h-7 text-xl text-white font-semibold  ">Kommex</h1>
+            <div className="flex items-center " >
+              <h1 className="h-7 text-xl text-white font-semibold" >Kommex</h1>
             </div>
 
             {/* Tombol burger untuk mobile */}
@@ -95,28 +103,16 @@ export default function Home() {
 
             <div className="hidden md:ml-6 md:block">
               <div className="flex space-x-4">
-                <Link
-                  href="#"
-                  className="rounded-md px-3 py-2 font-xl underline1"
-                >
+                <Link href="#" className="rounded-md px-3 py-2 font-xl underline1">
                   Home
                 </Link>
-                <Link
-                  href="#aboutus"
-                  className="rounded-md px-3 py-2 font-xl underline1"
-                >
+                <Link href="#aboutus" className="rounded-md px-3 py-2 font-xl underline1">
                   About Us
                 </Link>
-                <Link
-                  href="#portofolio"
-                  className="rounded-md px-3 py-2 font-medium underline1"
-                >
+                <Link href="#portofolio" className="rounded-md px-3 py-2 font-medium underline1">
                   Portofolio
                 </Link>
-                <Link
-                  href="/contact"
-                  className="rounded-md px-3 py-2 font-medium underline1"
-                >
+                <Link href="/contact" className="rounded-md px-3 py-2 font-medium underline1">
                   Contact Us
                 </Link>
               </div>
@@ -126,29 +122,16 @@ export default function Home() {
 
         <div className="md:hidden hidden" id="mobile-menu">
           <div className="space-y-1 px-2 pb-3 pt-2">
-            <Link
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center "
-              aria-current="page"
-            >
+            <Link href="#" className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center" aria-current="page" >
               Home
             </Link>
-            <Link
-              href="#aboutus"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center "
-            >
+            <Link href="#aboutus" className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center ">
               About us
             </Link>
-            <Link
-              href="#portofolio"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center "
-            >
+            <Link href="#portofolio" className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center ">
               Portofolio
             </Link>
-            <Link
-              href="#"
-              className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center "
-            >
+            <Link href="#"className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center ">
               Contact
             </Link>
           </div>
@@ -208,14 +191,14 @@ export default function Home() {
                 <span className="text-lg font-medium">NextJS</span>
               </div>
             </div>
-            <button id="aboutus"  className="bg-[#4F6F52] text-white px-6 py-2">
+            <button  className="bg-[#4F6F52] text-white px-6 py-2">
               See More
             </button>
           </div>
         </div>
       </div>
-
-      <div  className="px-4 bg-gray-100 py-24 my-44">
+<h1 id="aboutus"></h1>
+    <div  className="px-4 bg-gray-100 py-24 my-44" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
       <div className="max-w-7xl mx-auto text-left">
         {/* Teks About Us */}
         <h2  className="text-3xl font-semibold text-[#4F6F52] mb-6 text-center">-About Me-</h2>
@@ -239,22 +222,19 @@ export default function Home() {
     </div>
 
         <div className="flex flex-col md:flex-row gap-6 mb-8">
-  <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Community Projects</h3>
             <p className="text-gray-600">I have actively participated in creating websites that support local entrepreneurs, helping them establish an online presence and grow their businesses.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Study</h3>
             <p className="text-gray-600">I studied RPL at Smk Wira Harapan, where I developed my skills in web development.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Personal Projects</h3>
             <p className="text-gray-600">I work on personal projects that allow me to experiment with new technologies, improve my skills, and build web solutions for different needs and scenarios.</p>
           </div>
         </div>
-
- 
-
       </div>
     </div>
 
@@ -262,7 +242,7 @@ export default function Home() {
       <h1 className="text-3xl font-bold text-[#4F6F52] mb-10 text-center mt-20 underline">
         -Our Lastest Project-
       </h1>
-      <div className="  md:px-28 xl:px-32 py-6">
+      <div className="  md:px-28 xl:px-32 py-6" >
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
           <div className="bg-white p-4 rounded-lg shadow-lg">
             <Image 
