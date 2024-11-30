@@ -109,7 +109,7 @@ export default function Home() {
       {/* Contact Section */}
       <section
   id="contact"
-  className="pt-24 bg-gray-50 min-h-screen flex items-center"
+  className="pt-24 bg-gray-50 min-h-screen flex items-center gap-10"
 >
   <div className="container mx-auto md:px-20 flex flex-wrap lg:flex-nowrap ">
   <div className="w-full lg:w-1/2 flex items-center justify-center md:mb-0 mb-10">
@@ -117,7 +117,7 @@ export default function Home() {
         src="/Assets/profil3.png"
         width="512"
         height="512"
-        className="md:w-[570] w-60 lg:rounded-lg rounded-full"
+        className="lg:w-full max-w-xl w-60 lg:rounded-lg rounded-full"
       />
     </div>
     
