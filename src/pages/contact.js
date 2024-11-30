@@ -7,32 +7,27 @@ export default function Home() {
     const menuButton = document.querySelector('[aria-controls="mobile-menu"]');
     const mobileMenu = document.getElementById("mobile-menu");
 
-    if (menuButton && mobileMenu) {
-      menuButton.addEventListener("click", () => {
-        const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
-        menuButton.setAttribute("aria-expanded", !isExpanded);
-        mobileMenu.classList.toggle("hidden");
-      });
-    }
+    menuButton.addEventListener("click", () => {
+      const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", !isExpanded);
+      mobileMenu.classList.toggle("hidden");
+    });
 
-    return () => {
-      if (menuButton) {
-        menuButton.removeEventListener("click", () => {});
-      }
-    };
+
+    
   }, []);
 
   return (
     <>
-       <nav className="bg-[#1A4D2E] fixed top-0 w-screen z-50">
+      <nav className="bg-[#1A4D2E] fixed top-0 w-screen z-50">
         <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
           <div className="relative flex h-16 items-center justify-between">
-            {/* Logo di kiri */}
+            
             <div className="flex items-center " >
               <h1 className="h-7 text-xl text-white font-semibold" >Kommex</h1>
             </div>
 
-            {/* Tombol burger untuk mobile */}
+           
             <div className="absolute right-0 md:hidden">
               <button
                 type="button"
@@ -93,14 +88,39 @@ export default function Home() {
             </div>
           </div>
         </div>
-        </nav>  
+
+        <div className="md:hidden hidden" id="mobile-menu">
+          <div className="space-y-1 px-2 pb-3 pt-2">
+            <Link href="/" className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center" aria-current="page" >
+              Home
+            </Link>
+            <Link href="/#aboutus" className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center ">
+              About us
+            </Link>
+            <Link href="/#portofolio" className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center ">
+              Portofolio
+            </Link>
+            <Link href="#"className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center ">
+              Contact
+            </Link>
+          </div>
+        </div>
+      </nav>
       {/* Contact Section */}
       <section
   id="contact"
   className="pt-24 bg-gray-50 min-h-screen flex items-center"
 >
-  <div className="container mx-auto px-4 flex flex-wrap lg:flex-nowrap lg:space-x-6">
-    {/* Bagian Form */}
+  <div className="container mx-auto md:px-20 flex flex-wrap lg:flex-nowrap ">
+  <div className="w-full lg:w-1/2 flex items-center justify-center md:mb-0 mb-10">
+      <Image
+        src="/Assets/profil3.png"
+        width="512"
+        height="512"
+        className="md:w-[570] w-60 lg:rounded-lg rounded-full"
+      />
+    </div>
+    
     <div className="w-full lg:w-1/2">
       <div className="bg-white p-6 rounded-lg shadow-md">
         <h2 className="text-2xl font-bold text-gray-800 mb-4">
@@ -138,13 +158,7 @@ export default function Home() {
     </div>
 
     {/* Bagian Gambar */}
-    <div className="w-full lg:w-1/2 flex items-center justify-center">
-      <img
-        src="/Assets/mittor.png"
-        alt="Contact Illustration"
-        className="max-w-full h-auto rounded-lg shadow-md"
-      />
-    </div>
+
   </div>
 </section>
 

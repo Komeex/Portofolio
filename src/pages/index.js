@@ -140,7 +140,7 @@ export default function Home() {
             <Link href="#portofolio" className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center ">
               Portofolio
             </Link>
-            <Link href="#"className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center ">
+            <Link href="/contact"className="block rounded-md px-3 py-2 text-base font-medium text-gray-100 text-center ">
               Contact
             </Link>
           </div>
@@ -217,30 +217,30 @@ export default function Home() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8 text-center pb-10">
-      <div className="text-lg font-medium text-[#4F6F52]" data-aos="zoom-out-down" data-aos-delay="800" data-aos-duration="1000">
+      <div className="text-lg font-medium text-[#4F6F52]" data-aos="fade-down" data-aos-delay="800" data-aos-duration="1000">
         <p className="text-gray-500 text-sm">Negara</p>
         <p>Indonesia</p>
       </div>
-      <div className="text-lg font-medium text-[#4F6F52]" data-aos="zoom-out-down" data-aos-delay="600" data-aos-duration="1000">
+      <div className="text-lg font-medium text-[#4F6F52]" data-aos="fade-down" data-aos-delay="600" data-aos-duration="1000">
         <p className="text-gray-500 text-sm">Provinsi</p>
         <p>Bali</p>
       </div>
-      <div className="text-lg font-medium text-[#4F6F52]" data-aos="zoom-out-down" data-aos-delay="400" data-aos-duration="1000">
+      <div className="text-lg font-medium text-[#4F6F52]" data-aos="fade-down" data-aos-delay="400" data-aos-duration="1000">
         <p className="text-gray-500 text-sm">Kabupaten</p>
         <p>Tabanan</p>
       </div>
     </div>
 
         <div className="flex flex-col md:flex-row gap-6 mb-8">
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-out-up" data-aos-delay="400" data-aos-duration="1000">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Community Projects</h3>
             <p className="text-gray-600">I have actively participated in creating websites that support local entrepreneurs, helping them establish an online presence and grow their businesses.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-out-up" data-aos-delay="600" data-aos-duration="1000">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Study</h3>
             <p className="text-gray-600">I studied RPL at Smk Wira Harapan, where I developed my skills in web development.</p>
           </div>
-          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-out-up" data-aos-delay="800" data-aos-duration="1000">
+          <div className="bg-white p-6 rounded-lg shadow-lg flex-1" data-aos="zoom-in" data-aos-delay="800" data-aos-duration="1000">
             <h3 className="text-xl font-semibold text-[#4F6F52] mb-2">Personal Projects</h3>
             <p id="portofolio" className="text-gray-600">I work on personal projects that allow me to experiment with new technologies, improve my skills, and build web solutions for different needs and scenarios.</p>
           </div>
