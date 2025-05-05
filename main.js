@@ -74,6 +74,63 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
+
+// js couters 
+const counters = document.querySelectorAll(".counter");
+const container = document.querySelector(".counters");
+
+let activated = false;
+
+window.addEventListener("scroll", () => {
+  const triggerPoint = container.offsetTop - container.offsetHeight - 200;
+
+  if (window.pageYOffset > triggerPoint && !activated) {
+    counters.forEach(counter => {
+      const target = parseInt(counter.dataset.count);
+      
+      // Deteksi apakah simbol khusus seperti % atau +
+      const originalText = counter.textContent.trim();
+      const hasPlus = originalText.includes("+");
+      const hasPercent = originalText.includes("%");
+
+      let count = 0;
+
+      function updateCount() {
+        if (count < target) {
+          count++;
+          counter.innerText = count + (hasPlus ? "+" : hasPercent ? "%" : "");
+          setTimeout(updateCount, 20); // ⏱ ubah angka ini untuk delay
+        } else {
+          counter.innerText = target + (hasPlus ? "+" : hasPercent ? "%" : "");
+        }
+      }
+
+      updateCount();
+    });
+
+    activated = true;
+  }
+
+  // Optional: Reset ke 0 saat discroll ke atas
+  const resetPoint = container.offsetTop - container.offsetHeight - 500;
+  if ((window.pageYOffset < resetPoint || window.pageYOffset === 0) && activated) {
+    counters.forEach(counter => {
+      const originalText = counter.textContent.trim();
+      const hasPlus = originalText.includes("+");
+      const hasPercent = originalText.includes("%");
+
+      counter.innerText = "0" + (hasPlus ? "+" : hasPercent ? "%" : "");
+    });
+    activated = false;
+  }
+});
+
+
+
+
+
+
+// preloader
 setTimeout(() => {
     $(".overflow-preloader h1").addClass("active");
     setTimeout(() => {
