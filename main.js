@@ -1,53 +1,95 @@
+// nav js
 
- // Menu toggle functionality
- const menuToggle = document.getElementById('menu-toggle');
- const menuOverlay = document.getElementById('menu-overlay');
- const hamburgerTop = document.getElementById('hamburger-top');
- const hamburgerMiddle = document.getElementById('hamburger-middle');
- const hamburgerBottom = document.getElementById('hamburger-bottom');
- const menuItems = document.querySelectorAll('.menu-item');
- 
- let isMenuOpen = false;
- 
- function toggleMenu() {
-     isMenuOpen = !isMenuOpen;
-     
-     // Transform hamburger to X
-     if (isMenuOpen) {
-         // Show the menu
-         menuOverlay.classList.remove('-translate-x-full');
-         menuOverlay.classList.add('translate-x-0');
-         
-         // Animate hamburger to X
-         hamburgerTop.classList.add('rotate-45');
-         hamburgerTop.classList.add('translate-y-3');
-         hamburgerMiddle.classList.add('opacity-0');
-         hamburgerBottom.classList.add('-rotate-45');
-         hamburgerBottom.classList.add('-translate-y-1');
-     } else {
-         // Hide the menu
-         menuOverlay.classList.remove('translate-x-0');
-         menuOverlay.classList.add('-translate-x-full');
-         
-         // Animate X back to hamburger
-         hamburgerTop.classList.remove('rotate-45');
-         hamburgerTop.classList.remove('translate-y-3');
-         hamburgerMiddle.classList.remove('opacity-0');
-         hamburgerBottom.classList.remove('-rotate-45');
-         hamburgerBottom.classList.remove('-translate-y-1');
-     }
- }
- 
- menuToggle.addEventListener('click', toggleMenu);
- 
- // Close menu when menu item is clicked
- menuItems.forEach(item => {
-     item.addEventListener('click', () => {
-         if (isMenuOpen) {
-             toggleMenu();
-         }
-     });
- });
+document.addEventListener("DOMContentLoaded", function () {
+  let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
+  const toggleButton = document.querySelector(".burger");
+  let isOpen = false;
+
+  gsap.set(".menu-item p", {y: 225});
+
+  const timeline = gsap.timeline({paused: true});
+
+  timeline.to(".overlay", {
+      duration: 1.5,
+      clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      ease: "power4.inOut"
+  });
+
+  timeline.to(".menu-item p", {
+      duration: 1.5,
+      y: 0,
+      stagger: 0.2,
+      ease: "power4.out"
+  }, "-=1");
+
+  timeline.to(activeItemIndicator, {
+      width: "100%",
+      duration: 0,
+      ease: "power4.out",
+      delay: 0.5
+  }, "<");
+
+  toggleButton.addEventListener("click", function(){
+      if (isOpen) {
+          timeline.reverse();
+      } else {
+          timeline.play();
+      }
+      isOpen = !isOpen;
+  });
+});
+
+
+
+// following cursor
+$(document).ready(function() {
+  let cursor = $("#cursor");
+  let wind = window.innerWidth;
+  let innerCursor = $(".inner-cursor");
+      
+  function movecursor(e) {
+      let widthcursor = $("#cursor").width()/2;
+      wind = window.innerWidth;
+
+      if(e.clientX > wind / 2){
+          gsap.to(cursor, {
+          duration: 0.3,
+          delay:0.1,
+          x: e.clientX - widthcursor,
+          y: e.clientY -  widthcursor,
+          ease: "power2.out"
+      });
+      }else{
+          gsap.to(cursor, {
+          duration: 0.3,
+          delay:0.1,
+          x: e.clientX - widthcursor,
+          y: e.clientY -  widthcursor,
+          ease: "power2.out"
+      });
+      }
+  }
+
+  $(window).on('mousemove', movecursor);
+  $(window).resize(movecursor);
+
+  $(".category").mouseenter(function(){
+      $(".inner-cursor").addClass("active");
+  });
+  
+  $(".category").mouseleave(function(){
+      $(".inner-cursor").removeClass("active");
+  });
+  $(".overlay").mouseenter(function(){
+      $(".inner-cursor").addClass("active");
+  });
+  
+  $(".overlay").mouseleave(function(){
+      $(".inner-cursor").removeClass("active");
+  });
+});
+
+
 
 
 // typed js
