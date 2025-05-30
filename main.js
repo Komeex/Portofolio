@@ -111,15 +111,20 @@ $(document).ready(function() {
 });
 
 // lenis scroll
+document.addEventListener('touchstart', () => {}, { passive: true });
+
 const lenis = new Lenis({
-  lerp: 0.04, 
-  smooth: true
+  lerp: 0.1,
+  smooth: true,
 });
 
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
+
+requestAnimationFrame(raf);
+
 
 requestAnimationFrame(raf);
 
