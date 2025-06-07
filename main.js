@@ -114,7 +114,7 @@ $(document).ready(function() {
 document.addEventListener('touchstart', () => {}, { passive: true });
 
 const lenis = new Lenis({
-  lerp: 0.1,
+  lerp: 0.2,
   smooth: true,
 });
 
