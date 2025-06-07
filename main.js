@@ -95,6 +95,14 @@ $(document).ready(function() {
   $(".box-history").mouseleave(function(){
       $(".inner-cursor").removeClass("active");
   });
+
+  $(".contact_us").mouseenter(function(){
+      $(".inner-cursor").addClass("active");
+  });
+  
+  $(".contact_us").mouseleave(function(){
+      $(".inner-cursor").removeClass("active");
+  });
 });
 
 
@@ -114,7 +122,7 @@ $(document).ready(function() {
 document.addEventListener('touchstart', () => {}, { passive: true });
 
 const lenis = new Lenis({
-  lerp: 0.2,
+  lerp: 0.1,
   smooth: true,
 });
 
