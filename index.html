@@ -84,20 +84,20 @@
 
 <div class="overlay">
     <div class="overlay-menu">
-        <div class="menu-item">
-            <p><a id="active" href="#">HOME</a></p>
+        <div class="menu-item overflow-hidden">
+            <p class="overflow-hidden"><a id="active" href="#">HOME</a></p>
         </div>
-        <div class="menu-item">
-            <p><a href="#about">ABOUT</a></p>
+        <div class="menu-item overflow-hidden">
+            <p class="overflow-hidden"><a href="#about">ABOUT</a></p>
         </div>
-        <div class="menu-item">
-            <p><a href="#project">Project</a></p>
+        <div class="menu-item overflow-hidden">
+            <p class="overflow-hidden"><a href="#project">Project</a></p>
         </div>
-        <div class="menu-item">
-            <p><a href="#footer">LOCATION</a></p>
+        <div class="menu-item overflow-hidden">
+            <p class="overflow-hidden"><a href="#footer">LOCATION</a></p>
         </div>
-        <div class="menu-item">
-            <p><a href="#contact">CONTACT</a></p>
+        <div class="menu-item overflow-hidden">
+            <p class="overflow-hidden"><a href="#contact">CONTACT</a></p>
         </div>
     </div>
 </div>
@@ -241,7 +241,7 @@
       </div>
     </div>
 
-
+<!-- pc -->
     <section>
          <div class="area-history">
         <div class="outer-history">
@@ -306,6 +306,117 @@
     </div>
     </section>
 
+
+
+    <!-- mobile -->
+ <section class="min-h-screen py-16 px-4 bg-[#161616] md:hidden block">
+        <div class="max-w-7xl mx-auto">
+            <!-- Header Section -->
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    My Projects
+                </h2>
+                
+
+                
+                <!-- Description -->
+                <p class="text-lg md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
+                    I have developed a variety of exciting projects in the field of web and application development, 
+                    including a POS system, laundry management, and a student data interface. Each project reflects my passion for learning and exploration, 
+                    aimed at sharpening my skills in the world of software development.
+                </p>
+            </div>
+            
+            <!-- Projects Grid -->
+            <div class="grid grid-cols-1 gap-8">
+                <!-- Project 1 - Nyarik Kopi -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="assets/nyarik.png" alt="Nyarik Kopi" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 md:p-8 bg-[#1a202c]">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 text-blue-400">
+                            Nyarik Kopi
+                        </h3>
+                        <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+                            A promotional website for Nyarik Kopi, a local coffee destination in Bali. This project showcases the café's unique rural atmosphere, menu highlights, and location details through a responsive and visually appealing interface.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Website</span>
+                            <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Responsive</span>
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Bali Coffee</span>
+                            <span class="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-sm">Promotion</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - WebCraft 2026 -->
+                <div class="bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="assets/webcraft.png" alt="WebCraft 2026" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 md:p-8 bg-[#3f0659]">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 text-purple-400">
+                            WebCraft 2026
+                        </h3>
+                        <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+                            A modern web development framework designed for the future. WebCraft 2026 incorporates the latest technologies and best practices to create stunning, responsive websites with enhanced performance and user experience.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-sm">Framework</span>
+                            <span class="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-sm">Modern Tech</span>
+                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-300 rounded-full text-sm">Performance</span>
+                            <span class="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full text-sm">Future Ready</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 - Laundry Management -->
+                <div class="bg-gradient-to-br from-slate-800 to-slate-700 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="assets/Laundry.png" alt="Laundry Management" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 md:p-8 bg-[#1a202c]">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 text-green-400">
+                            Laundry Management System
+                        </h3>
+                        <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+                            Laundry Management System designed to streamline laundry operations through digital automation. This application features order tracking, payment integration, customer profiles, and employee management, providing a seamless and efficient solution for both customers and business owners.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-sm">Order Tracking</span>
+                            <span class="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm">Payment System</span>
+                            <span class="px-3 py-1 bg-red-500/20 text-red-300 rounded-full text-sm">Customer Management</span>
+                            <span class="px-3 py-1 bg-violet-500/20 text-violet-300 rounded-full text-sm">Digital Automation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 - SAS Project -->
+                <div class="bg-gradient-to-br from-gray-700 to-gray-600 rounded-2xl overflow-hidden shadow-xl transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="assets/sas.png" alt="SAS Project" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                    </div>
+                    <div class="p-6 md:p-8 bg-[#3f0659]">
+                        <h3 class="text-2xl md:text-3xl font-bold mb-4 text-yellow-400">
+                            SAS Analytics Project
+                        </h3>
+                        <p class="text-gray-300 text-base md:text-lg leading-relaxed">
+                            Statistical Analysis System project focused on data analytics and business intelligence. This comprehensive solution provides advanced analytics capabilities, data visualization, and reporting tools for data-driven decision making.
+                        </p>
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-yellow-500/20 text-yellow-300 rounded-full text-sm">Data Analytics</span>
+                            <span class="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-sm">Data Visualization</span>
+                            <span class="px-3 py-1 bg-pink-500/20 text-pink-300 rounded-full text-sm">Business Intelligence</span>
+                            <span class="px-3 py-1 bg-emerald-500/20 text-emerald-300 rounded-full text-sm">Reporting Tools</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
 
     <section id="footer" class="min-h-screen">
       <!-- Footer Section -->
