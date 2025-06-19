@@ -112,7 +112,7 @@ $(document).ready(function() {
  const typed = new Typed('#text_type', {
   strings: ['Student.', 'Newbie','Begginer Web Developer','Front-End Developer'],
   typeSpeed: 80,
-  startDelay: 7500,
+  startDelay: 500,
   loop: true,
   backSpeed: 50,
 

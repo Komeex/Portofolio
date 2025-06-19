@@ -361,13 +361,13 @@ nav {
             left: 0;
             width: 0%;
             height: 100%;
-            background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(90deg, #40007c 0%, #a855f7 100%);
             border-radius: 2px;
             transition: width 0.3s ease;
         }
 
         .inner-time-line.active h6 {
-            color: #667eea;
+            color: #a855f7;
         }
 
         .area-scroll-history {
@@ -495,7 +495,7 @@ nav {
             font-size: 3rem;
             margin-bottom: 2rem;
             text-align: center;
-            background: linear-gradient(135deg, #667eea 0%, #8352b4 100%);
+            background: #a855f7;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
